@@ -17,10 +17,10 @@ RUN \
      \
     && \
   echo Downloading dogecoind source && \
-  mkdir dogecoin-bin && \
+  mkdir ~/dogecoin-bin && \
   curl -# -L ${DOGENODE_URL} |tar xz --strip 1 -C dogecoin-bin && \
   echo Compiling Dogenode ${DOGENODE_VERSION} && \
-  cd dogecoin-bin && \
+  cd ~/dogecoin-bin && \
   if [ ! -f ~/.dogecoin/dogecoin.conf ]; then \
     echo Generating dogecoin.conf file; \
     mkdir ~/.dogecoin; \
