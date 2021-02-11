@@ -7,7 +7,8 @@ ARG DOGENODE_VERSION=1.14.2
 ARG DOGENODE_URL=https://github.com/dogecoin/dogecoin/releases/download/${DOGENODE_VERSION}/dogecoin=${DOGENODE_VERSION}-x68_64-lunux-gnu.tar.gz
 
 RUN \
-  add-pkg --virtual build-dependencies \
+  apk -U upgrade && \
+  apk add \
     curl \
     gpg \
     ca-certificates \
