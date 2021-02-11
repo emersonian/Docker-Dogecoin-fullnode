@@ -30,8 +30,11 @@ RUN \
   fi && \
   if [ -f ~/.dogecoin/bootstrap.dat.old ]; then\
     rm ~/.dogecoin/bootstrap.dat.old; \
-  fi && \
-  echo Running dogecoin && \
+  fi
+RUN echo Running dogecoin && \
+  pwd && \ 
+  ls -al && \
+  ls -al ~ && \
   ~/dogecoin-bin/bin/dogecoind -maxconnections=500 -printtoconsole -shrinkdebugfile
 
 LABEL \
