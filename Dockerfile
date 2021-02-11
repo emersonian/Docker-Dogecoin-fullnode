@@ -4,7 +4,7 @@ FROM alpine:latest
 ARG DOGENODE_VERSION=1.14.2
 
 # Define download URLs
-ARG DOGENODE_URL=https://github.com/dogecoin/dogecoin/releases/download/${DOGENODE_VERSION}/dogecoin=${DOGENODE_VERSION}-x68_64-lunux-gnu.tar.gz
+ARG DOGENODE_URL=https://github.com/dogecoin/dogecoin/releases/download/${DOGENODE_VERSION}/dogecoin-${DOGENODE_VERSION}-x68_64-lunux-gnu.tar.gz
 
 RUN \
   apk -U upgrade && \
