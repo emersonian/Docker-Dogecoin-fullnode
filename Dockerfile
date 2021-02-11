@@ -10,10 +10,10 @@ RUN \
   apk -U upgrade && \
   apk add \
     curl \
-    gpg \
+    gnupg \
     ca-certificates \
     tar \
-    dirmngr \
+     \
     && \
   echo Downloading dogecoind source && \
   mkdir dogecoin-bin && \
