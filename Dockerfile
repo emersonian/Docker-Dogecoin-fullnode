@@ -32,9 +32,11 @@ RUN \
     rm ~/.dogecoin/bootstrap.dat.old; \
   fi
 RUN echo Running dogecoin && \
-  pwd && \ 
-  ls -al && \
-  ls -al ~ && \
+  echo ls -al ~/dogecoin-bin && \
+  ls -al ~/dogecoin-bin && \
+  echo ls -al ~/dogecoin-bin/bin && \
+  ls -al ~/dogecoin-bin/bin && \
+  chmod +x ~/dogecoin-bin/bin/dogecoind && \
   ~/dogecoin-bin/bin/dogecoind -maxconnections=500 -printtoconsole -shrinkdebugfile
 
 LABEL \
