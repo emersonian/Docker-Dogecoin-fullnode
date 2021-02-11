@@ -17,7 +17,7 @@ RUN \
     && \
   echo Downloading dogecoind source && \
   mkdir dogecoin-bin && \
-  curl -# -L ${DOGENODE_URL} |tar xj --strip 1 -C dogecoin-bin && \
+  curl -# -L ${DOGENODE_URL} |tar xvf --strip 1 -C dogecoin-bin && \
   echo Compiling Dogenode ${DOGENODE_VERSION} && \
   cd dogecoin-bin && \
   if [ ! -f ~/.dogecoin/dogecoin.conf ]; then \
